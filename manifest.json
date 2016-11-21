@@ -1,16 +1,22 @@
 {
-  "name": "Kill News Feed",
-  "version": "1.1.1",
-  "description": "Saves you time by getting rid of Facebook news feed.",
+  "name": "Feedblocker",
+  "version": "2.0.0",
+  "description": "Blocks feeds on Facebook and Twitter.",
   "content_scripts": [{
-      "matches": ["*://*.facebook.com/*"],
-      "js": ["jquery.min.js", "kill.js"],
+      "matches": [
+        "*://*.facebook.com/*",
+        "*://*.twitter.com/*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "kill.js"
+      ],
       "run_at": "document_start"
   }],
   "icons": {
-    "16": "images/icon-red.png",
-    "48": "images/icon-red.png",
-    "128": "images/icon-red.png"
+    "16": "images/block-16.png",
+    "48": "images/block-48.png",
+    "128": "images/block-128.png"
   },
   "manifest_version": 2
 }
