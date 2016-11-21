@@ -5,7 +5,9 @@
   "content_scripts": [{
       "matches": [
         "*://*.facebook.com/*",
-        "*://*.twitter.com/*"
+        "*://*.twitter.com/*",
+        "*://news.ycombinator.com/*",
+        "*://medium.com/*"
       ],
       "js": [
         "jquery.min.js",

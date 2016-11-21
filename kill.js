@@ -17,10 +17,39 @@ function blockTwitterFeed() {
     $('.MomentsGuidePage-content').remove()
 }
 
-if (location.origin === "https://www.facebook.com") {
+function blockHackerNewsFeed() {
+    var rows = $('#hnmain tr')
+    if (rows.length > 4) {
+        var stories = $('#hnmain tr')[3]
+        var footer = $('#hnmain tr')[4]
+        stories.remove()
+        footer.remove()
+    }
+}
+
+function blockMediumFeed() {
+    var feed = $('.js-homeStream')
+    var sidebar = $('.js-sidebarContent')
+    feed.remove()
+    sidebar.remove()
+}
+
+if (location.host === "www.facebook.com") {
     window.setInterval(blockFacebookFeed, 100)
 }
 
-if (location.origin === "https://twitter.com") {
-    window.setInterval(blockTwitterFeed, 100)
+if (location.host === "twitter.com") {
+    if (location.pathname === '/' || location.pathname === '/news') {
+        window.setInterval(blockTwitterFeed, 100)
+    }
+}
+
+if (location.host === "news.ycombinator.com") {
+    if (location.pathname === '/') {
+        window.setInterval(blockHackerNewsFeed, 100)
+    }
+}
+
+if (location.host === "medium.com") {
+    window.setInterval(blockMediumFeed, 100)
 }
