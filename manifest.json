@@ -1,7 +1,7 @@
 {
   "name": "Feedblocker",
-  "version": "2.0.0",
-  "description": "Blocks feeds on Facebook and Twitter.",
+  "version": "2.1.0",
+  "description": "Blocks feeds on various social sites, like Facebook and Twitter.",
   "content_scripts": [{
       "matches": [
         "*://*.facebook.com/*",
@@ -10,8 +10,11 @@
         "*://medium.com/*"
       ],
       "js": [
-        "jquery.min.js",
-        "kill.js"
+        "src/jquery.min.js",
+        "src/facebook.js",
+        "src/twitter.js",
+        "src/hackernews.js",
+        "src/medium.js",
       ],
       "run_at": "document_start"
   }],
