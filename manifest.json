@@ -14,7 +14,7 @@
         "src/facebook.js",
         "src/twitter.js",
         "src/hackernews.js",
-        "src/medium.js",
+        "src/medium.js"
       ],
       "run_at": "document_start"
   }],
