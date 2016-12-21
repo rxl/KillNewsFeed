@@ -27,7 +27,7 @@ if (location.host === "DOMAIN_NAME") {
 
 4) Fill in the HTML_SELECTOR that corresponds to the DOM element that encapsulates the feed. You can use the chrome HTML inspector to determine this (e.g. ".js-homeStream").
 
-5) Add the domain name to the "matches" list in the "manifest.json" file (e.g. "*://medium.com/*").
+5) Add the domain name to the "matches" list in the "manifest.json" file (e.g. `"*://medium.com/*"`).
 
 6) Add the name of the script file to the "js" list in the "manifest.json" file (e.g. "src/medium.js").
 
